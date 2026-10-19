@@ -1,0 +1,13 @@
+{
+  "name": "quantum-echo-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check dist/game.js && node --check dist/game-scene.js && node --check dist/story.js && node --check dist/science.js && node --check dist/app.js && node --check dist/lab.js && node --check dist/receiver.js && node --check dist/training.js && node --check dist/pair-play.js && node --check dist/joint-lens.js && node --check dist/entanglement-model.js && node --check dist/joint-model.js"
+  },
+  "dependencies": {
+    "phaser": "3.90.0"
+  }
+}

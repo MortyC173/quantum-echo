@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#e9eddd"/><meta name="description" content="驾驶量子照明雷达，发射探测信号、保存参考、接回波，在三座噪声岛上寻找隐藏目标。"/><title>量子雷达 · 回声侦探</title><link rel="icon" href="./favicon.svg"/><link rel="stylesheet" href="./game.css"/><link rel="stylesheet" href="./receiver.css"/><link rel="stylesheet" href="./training.css"/><link rel="stylesheet" href="./pair-play.css"/><link rel="stylesheet" href="./joint-lens.css"/></head><body>
+<header class="game-header"><a class="game-brand" href="./"><img src="./favicon.svg" alt="" width="34" height="34"/><span>量子雷达<small>回声侦探</small></span></a><div class="header-center"><span class="tiny-star">✦</span>解读量子世界 · 洞见科技未来</div><div class="header-actions"><button id="sound-toggle" aria-label="开启游戏声音" title="游戏声音">♫<span>静音</span></button><button id="help-button">怎么玩 <span>?</span></button></div></header>
+<main class="game-shell">
+ <section id="training-section" hidden aria-label="量子参考怎样帮助探测"></section>
+ <section class="game-board" aria-label="量子照明雷达游戏">
+   <div class="game-hud" id="game-hud" hidden><div class="level-badge"><span id="level-number">01</span><div><small>当前任务</small><strong id="level-name">初次出航</strong></div></div><div class="resource-badge"><span>⚡</span><div><small>剩余探测</small><strong id="energy">12</strong></div></div><button id="pause-button" class="pause-button" aria-label="暂停游戏">Ⅱ</button></div>
+   <div id="game-world" role="img" aria-label="量子照明雷达：探测信号由雷达天线发射到远端区域，回波返回与本地保存的参考共同接收。"></div>
+   <div class="intro-copy" id="intro-copy"><div class="game-eyebrow">一场藏在噪声里的寻踪任务</div><h1>看不见，<br/>也能<span>找得到？</span></h1><p>一束去探测，一束留作参考。<br/>回波和参考一起检查，从噪声里找线索。</p><button class="play-button" id="start-button">启动量子雷达<span>→</span></button><div class="intro-meta"><span>3 个关卡</span><i></i><span>约 5 分钟</span><i></i><span>边玩边懂</span></div></div>
+   <div class="world-caption" id="world-caption"><span class="caption-dot"></span>量子照明雷达 · 教学想象场景</div>
+   <div class="flight-label" id="flight-label" aria-live="polite"></div>
+   <div class="scene-toast" id="scene-toast" role="status" aria-live="polite"></div>
+ </section>
+ <section class="game-console" id="game-console" hidden aria-label="雷达控制台"></section>
+ <section id="receiver-panel" class="receiver-panel" hidden aria-label="这次雷达收到了什么"></section>
+ <section class="start-footer" id="start-footer"><div><span class="footer-orb green"></span><span><strong>一束出发</strong><small>去目标那里看看</small></span></div><span class="footer-plus">＋</span><div><span class="footer-orb purple"></span><span><strong>一束留守</strong><small>等回波一起检查</small></span></div><button id="science-button">这就是量子照明？<span>↗</span></button></section>
+</main>
+<footer class="game-footer"><span>原创互动科普 · 量子感知</span><div><button id="training-button">量子参考怎么帮忙</button><span>/</span><button id="guide-button">发现手册</button><span>/</span><button id="sources-button">科学依据</button><span>/</span><span>教学模拟</span></div></footer>
+<dialog id="game-modal"><button id="modal-close" aria-label="关闭" class="modal-close">✕</button><div id="modal-body"></div></dialog>
+<noscript>启用 JavaScript，即可启动你的量子雷达。</noscript><script src="./vendor/phaser.min.js"></script><script type="module" src="./game.js"></script></body></html>

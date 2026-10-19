@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f5ee" />
+  <meta name="description" content="从纠缠信号出发，亲手完成一次量子照明探测。八个互动环节、自由实验与隐藏目标挑战，理解弱回波中的科学。" />
+  <title>量子回声｜交互探测实验室</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="量子回声首页"><img src="./favicon.svg" width="38" height="38" alt="" /><span>量子回声<small>交互探测实验室</small></span></a>
+    <nav class="main-nav" aria-label="体验模式">
+      <button class="nav-item active" data-mode="guide" aria-pressed="true">引导探索</button>
+      <button class="nav-item" data-mode="sandbox" aria-pressed="false">自由实验</button>
+      <button class="nav-item" data-mode="challenge" aria-pressed="false">探测挑战<span class="nav-dot"></span></button>
+    </nav>
+    <button class="icon-button notebook-trigger" data-modal="notebook" aria-label="打开实验手册"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h7a3 3 0 0 1 3 3v14a3 3 0 0 0-3-3H4zM14 6h6v12h-6M7 8h4M7 11h4"/></svg><span>实验手册</span></button>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="hero-title">
+      <div><div class="eyebrow"><span class="live-dot"></span>前沿量子科技 · 互动科普</div><h1 id="hero-title">在噪声之中，<span>听见量子回声。</span></h1><p class="intro-copy">从两路纠缠信号出发，亲手完成一次探测，发现微弱回波中的线索。</p></div>
+      <div class="mission"><span class="mission-label">你的实验任务</span><p>这片噪声里，<br/>究竟有没有目标？<span class="target-icon">◎</span></p><div><span>约 8 分钟</span><i></i><span>8 个探索环节</span></div></div>
+    </section>
+
+    <section class="workspace" aria-label="交互量子实验台">
+      <div class="bench">
+        <div class="bench-heading"><div><span class="micro-index">01—08</span><span id="bench-title">量子照明实验台</span></div><span class="simulation-label"><span></span>教学模拟</span></div>
+        <div class="canvas-wrap"><canvas id="lab" role="img" aria-label="量子实验台：量子源分出探测与参考通路，探测信号经过目标区域返回，与保留参考在联合接收器中测量。"></canvas><div class="bench-note" id="bench-note">点击设备，也可以探索它的作用</div></div>
+        <div class="bench-status"><span><i class="legend-dot signal"></i>探测通路</span><span><i class="legend-dot reference"></i>参考通路</span><span class="bench-live" id="bench-live">设备待机</span><button class="small-icon" id="motion-toggle" aria-label="暂停装置动画" title="暂停动画">Ⅱ</button></div>
+      </div>
+      <aside class="control-panel" id="control-panel" aria-label="实验操作"></aside>
+    </section>
+
+    <section class="journey" aria-label="实验流程"><div class="journey-top"><span>一次探测的完整旅程</span><span id="journey-progress">已探索 0 / 8</span></div><div class="step-track" id="step-track"></div></section>
+    <section class="insight-strip"><span class="insight-symbol">✳</span><div><strong id="insight-title">让每一次操作，都成为一次发现。</strong><p id="insight-copy">先理解信号如何旅行，再尝试在未知中做出判断。</p></div><button class="text-button" data-modal="science">背后的科学<span>↗</span></button></section>
+  </main>
+
+  <footer><span>解读量子世界 · 洞见科技未来</span><div><span>原创交互科普作品</span><span class="footer-separator">/</span><button data-modal="sources">科学依据与模型说明 ↗</button></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="info-modal"><div class="modal-header"><span class="eyebrow">量子回声 / 实验手册</span><button class="icon-button" id="close-modal" aria-label="关闭弹窗">✕</button></div><div id="modal-content"></div></dialog>
+  <noscript><p class="noscript">请启用 JavaScript 以运行交互实验。量子照明利用初始纠缠的探测与参考信号，通过联合测量和重复统计判断目标是否存在。</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
